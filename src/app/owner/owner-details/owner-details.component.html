@@ -35,4 +35,4 @@
     </ng-template>
   </div>
   
-  <app-owner-accounts [accounts]="owner?.accounts"></app-owner-accounts>
+  <app-owner-accounts [accounts]="owner?.accounts" (onAccountClick)="printToConsole($event)"></app-owner-accounts>

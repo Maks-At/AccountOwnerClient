@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Account } from './../../../_interfaces/account.model'
 
 @Component({
@@ -8,10 +8,14 @@ import { Account } from './../../../_interfaces/account.model'
 })
 export class OwnerAccountsComponent implements OnInit {
   @Input() accounts: Account[];
+  @Output() onAccountClick: EventEmitter<Account> = new EventEmitter();
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  onAccountClicked = (account: Account) => {
+    this.onAccountClick.emit(account);
+  }
 }

@@ -1,3 +1,4 @@
+import { Account } from './../../_interfaces/account.model';
 import { HttpErrorResponse } from '@angular/common/http';
 import { ErrorHandlerService } from './../../shared/services/error-handler.service';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -36,5 +37,9 @@ export class OwnerDetailsComponent implements OnInit {
         this.errorMessage = this.errorHandler.errorMessage;
       }
     });
+  }
+
+  printToConsole = (param: Account) => {
+    console.log('Account parameter from the child component', param)
   }
 }
