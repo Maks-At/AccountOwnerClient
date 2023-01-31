@@ -10,6 +10,7 @@ import { HttpClientModule } from '@angular/common/http'
 import { HomeComponent } from './home/home.component';
 import { MenuComponent } from './menu/menu.component';
 import { NotFoundComponent } from './error-pages/not-found/not-found.component';
+import { OwnerModule } from './owner/owner.module';
 
 @NgModule({
   declarations: [AppComponent, HomeComponent, MenuComponent, NotFoundComponent],
@@ -19,6 +20,7 @@ import { NotFoundComponent } from './error-pages/not-found/not-found.component';
     BrowserAnimationsModule,
     HttpClientModule,
     CollapseModule.forRoot(),
+    OwnerModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
