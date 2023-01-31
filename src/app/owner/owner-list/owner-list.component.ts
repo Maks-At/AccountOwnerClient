@@ -20,8 +20,8 @@ export class OwnerListComponent implements OnInit {
   private getAllOwners = () => {
     const apiAddress: string = 'api/owner';
     this.repository.getOwners(apiAddress)
-    .subscribe((own) => {
+    .subscribe(own => {
       this.owners = own;
-    });
-  };
+    })
+  }
 }
