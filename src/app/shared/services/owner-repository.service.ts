@@ -41,6 +41,10 @@ export class OwnerRepositoryService {
     );
   };
 
+  public getOwner = (route: string) => {
+    return this.http.get<Owner>(this.createCompleteRoute(route, this.envUrl.urlAddress));
+  }
+
   private createCompleteRoute = (route: string, envAddress: string) => {
     return `${envAddress}/${route}`;
   };
