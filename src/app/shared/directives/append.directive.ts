@@ -10,7 +10,6 @@ export class AppendDirective implements OnChanges {
   constructor(private element: ElementRef, private renderer: Renderer2) { }
 
   ngOnChanges(changes: SimpleChanges) {
-    console.log('inside append directive')
     if(changes.ownerParam.currentValue){
       const accNum = changes.ownerParam.currentValue.accounts.length;
       const span = this.renderer.createElement('span');
