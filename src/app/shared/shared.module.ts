@@ -20,7 +20,8 @@ import { AppendDirective } from './directives/append.directive';
   ],
   exports:[
     ErrorModalComponent,
-    SuccessModalComponent
+    SuccessModalComponent,
+    AppendDirective
   ]
 })
 export class SharedModule { }
