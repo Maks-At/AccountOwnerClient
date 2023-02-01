@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms';
+import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 
 import { OwnerRoutingModule } from './owner-routing.module';
 import { OwnerListComponent } from './owner-list/owner-list.component';
@@ -19,7 +21,9 @@ import { OwnerCreateComponent } from './owner-create/owner-create.component';
   imports: [
     CommonModule,
     OwnerRoutingModule,
-    SharedModule
+    SharedModule,
+    ReactiveFormsModule,
+    BsDatepickerModule.forRoot()
   ]
 })
 export class OwnerModule { }
